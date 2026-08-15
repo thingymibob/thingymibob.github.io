@@ -12,6 +12,11 @@ div{
     display: flex;
     border-radius: 25px;
 }
+/* Here I found out that I needed to display flex the border as well
+as all the elements if I wanted my page to be in a horizontal format-I chose this format actually because
+I was inspired by Rich Brown's website layout which was interesting and unique, and inline-block 
+produced the result I wanted however this did mean I had to use display flex individually for the headers and 
+add extra div elements. */
 .container {
     display: flex;
     align-items: center;
@@ -63,7 +68,10 @@ p{
     margin: 2rem 15rem;
 }
 /* arem-vertical border brem-horizontal border */
-
+/* The most challenging area for me was CSS and especially adjusting the different
+elements in accordance to height, I used W3 schools to figure out what elements to use
+and Val to double check that I had done things right because every now and then something 
+would clash with what I had put in the HTML file. */
 .photocard img {
     position: absolute;
     top: 0;
