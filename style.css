@@ -1,0 +1,109 @@
+html {
+background-color: rgb(244, 249, 255);
+}
+div{
+    padding: 1.5rem;
+}
+.border {
+    border: 2px solid rgb(187, 187, 206);
+    border-style: dotted;
+    margin: 10px;
+    border-width: 4.5px;
+    display: flex;
+    border-radius: 25px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+/* Container within container-used titles separately to let the arrow be positioned horizontally */
+.titles {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 40em;
+}
+
+#arrow {
+    font-size: 4rem;
+    color: rgb(78, 78, 111);
+}
+h1 {
+    color: rgb(78, 78, 111);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 3em;
+}
+.title-background {
+    background-color: rgb(244, 249, 255);
+    padding: 0rem;
+    border-radius: 25px;
+}
+h6 {
+    color: rgb(78, 78, 111);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 1em;
+}
+p{
+    color: rgb(78, 78, 111);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    width: 400px;
+    line-height: 1.8;
+}
+.photocard {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    padding: 10;
+    margin: 2rem 15rem;
+}
+/* arem-vertical border brem-horizontal border */
+
+.photocard img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 550px;
+    height: 400px;
+}
+
+.hover-photo {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    text-align: center;
+}
+
+.photocard:hover .main-photo {
+    opacity: 0;
+}
+
+.photocard:hover .hover-photo {
+    opacity: 1;
+}
+.questions {
+    position: absolute;
+    top: 6em;
+    left: 10em;
+    width: 10em;
+    text-align: center;
+    line-height: 1.2;
+    color: rgb(90, 90, 111);
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+}
+.photocard:hover .questions {
+    opacity: 0;
+}
+/* When hovering over .class,
+   select the .hide element immediately after it
+   and make it visible */
