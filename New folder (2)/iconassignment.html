@@ -2,9 +2,7 @@
 <html>
     
     <head>
-    <title>Icon Template Square</title>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+    <title>Icon <abbr title=""></abbr>ssignment</title>
 
     <style>
         .row {
@@ -21,7 +19,7 @@
         img {
             cursor: pointer;
             user-select: none;
-            filter: drop-shadow(3px 3px 1px rgba(74, 90, 108, 0.381));
+            filter: drop-shadow(4px 4px 1px rgba(131, 151, 174, 0.381));
         }
     </style>
 </head>
@@ -119,18 +117,6 @@
 
 
     <script>
-
-        var sound1 = new buzz.sound("sound/glitch1.mp3");
-        var sound2 = new buzz.sound("sound/glitch2.mp3");
-        var sound3 = new buzz.sound("sound/glitch3.mp3");
-        var sound4 = new buzz.sound("sound/glitch1.mp3");
-        var sound5 = new buzz.sound("sound/glitch2.mp3");
-        var sound6 = new buzz.sound("sound/glitch3.mp3");
-        var sound7 = new buzz.sound("sound/glitch1.mp3");
-        var sound8 = new buzz.sound("sound/glitch2.mp3");
-        var sound9 = new buzz.sound("sound/glitch3.mp3");
-
-
         const images = document.querySelectorAll("img[data-clicked]");
 
         images.forEach(function(image) {
@@ -152,52 +138,63 @@
             });
 
         });
-    var potionSound = new buzz.sound("sound/potion.mp3");
-    var charmSound = new buzz.sound("sound/charm.mp3");
-    var spellSound = new buzz.sound("sound/spell.mp3");
-    var hexSound = new buzz.sound("sound/hex.mp3");
-    var outfitSound = new buzz.sound("sound/outfit.mp3");
-    var duelSound = new buzz.sound("sound/duel.mp3");
-    var courtSound = new buzz.sound("sound/court.mp3");
-    var crystalSound = new buzz.sound("sound/crystal.mp3");
-    var gossipSound = new buzz.sound("sound/gossip.mp3");
+
+    var potionSound = new Audio("potion.mp3");
+    var charmSound = new Audio("charm.mp3");
+    var spellSound = new Audio("spell.mp3");
+    var hexSound = new Audio("hex.mp3");
+    var outfitSound = new Audio("outfit.mp3");
+    var duelSound = new Audio("duel.mp3");
+    var courtSound = new Audio("court.mp3");
+    var crystalSound = new Audio("crystal.mp3");
+    var gossipSound = new Audio("gossip.mp3");
 
     document.getElementById("img1").addEventListener("click", function() {
+        potionSound.currentTime = 0;
         potionSound.play();
     });
 
     document.getElementById("img2").addEventListener("click", function() {
+        charmSound.currentTime = 0;
         charmSound.play();
     });
 
     document.getElementById("img3").addEventListener("click", function() {
+        spellSound.currentTime = 0;
         spellSound.play();
     });
 
     document.getElementById("img4").addEventListener("click", function() {
+        hexSound.currentTime = 0;
         hexSound.play();
     });
 
     document.getElementById("img5").addEventListener("click", function() {
+        outfitSound.currentTime = 0;
         outfitSound.play();
     });
 
     document.getElementById("img6").addEventListener("click", function() {
+        duelSound.currentTime = 0;
         duelSound.play();
     });
 
     document.getElementById("img7").addEventListener("click", function() {
+        courtSound.currentTime = 0;
         courtSound.play();
     });
 
     document.getElementById("img8").addEventListener("click", function() {
+        crystalSound.currentTime = 0;
         crystalSound.play();
     });
 
     document.getElementById("img9").addEventListener("click", function() {
+        gossipSound.currentTime = 0;
         gossipSound.play();
     });
-    </script>
+
+</script>
 
 </body>
 
