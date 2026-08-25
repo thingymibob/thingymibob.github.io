@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>Icon Template Square</title>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+
+    <style>
+        .row {
+            width: 720px;
+            margin: 10px auto;
+        }
+
+        .image-container {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 20px;
+        }
+
+        img {
+            cursor: pointer;
+            user-select: none;
+            filter: drop-shadow(3px 3px 1px rgba(74, 90, 108, 0.381));
+        }
+    </style>
+</head>
+
+<body style="background-color: #dce8ff;">
+
+    <div class="row">
+        <div class="image-container">
+            <img id="img1"
+                 src="brewpotion.png"
+                 data-normal="brewpotion.png"
+                 data-clicked="brewpotion2.png"
+                 height="200"
+                 width="200">
+        </div>
+
+        <div class="image-container">
+            <img id="img2"
+                 src="charm.png"
+                 data-normal="charm.png"
+                 data-clicked="charm2.png"
+                 height="200"
+                 width="200">
+        </div>
+
+        <div class="image-container">
+            <img id="img3"
+                 src="castspell.png"
+                 data-normal="castspell.png"
+                 data-clicked="castspell2.png"
+                 height="200"
+                 width="200">
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="image-container">
+            <img id="img4"
+                 src="casthex.png"
+                 data-normal="casthex.png"
+                 data-clicked="casthex2.png"
+                 height="200"
+                 width="200">
+        </div>
+
+        <div class="image-container">
+            <img id="img5"
+                 src="outfitspell.png"
+                 data-normal="outfitspell.png"
+                 data-clicked="outfitspell2.png"
+                 height="200"
+                 width="200">
+        </div>
+
+        <div class="image-container">
+            <img id="img6"
+                 src="challengetoduel.png"
+                 data-normal="challengetoduel.png"
+                 data-clicked="challengetoduel2.png"
+                 height="200"
+                 width="200">
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="image-container">
+            <img id="img7"
+                 src="court.png"
+                 data-normal="court.png"
+                 data-clicked="court2.png"
+                 height="200"
+                 width="200">
+        </div>
+
+        <div class="image-container">
+            <img id="img8"
+                 src="usecrystalball.png"
+                 data-normal="usecrystalball.png"
+                 data-clicked="usecrystalball2.png"
+                 height="200"
+                 width="200">
+        </div>
+
+        <div class="image-container">
+            <img id="img9"
+                 src="gossip.png"
+                 data-normal="gossip.png"
+                 data-clicked="gossip2.png"
+                 height="200"
+                 width="200">
+        </div>
+    </div>
+
+
+    <script>
+
+        var sound1 = new buzz.sound("sound/glitch1.mp3");
+        var sound2 = new buzz.sound("sound/glitch2.mp3");
+        var sound3 = new buzz.sound("sound/glitch3.mp3");
+        var sound4 = new buzz.sound("sound/glitch1.mp3");
+        var sound5 = new buzz.sound("sound/glitch2.mp3");
+        var sound6 = new buzz.sound("sound/glitch3.mp3");
+        var sound7 = new buzz.sound("sound/glitch1.mp3");
+        var sound8 = new buzz.sound("sound/glitch2.mp3");
+        var sound9 = new buzz.sound("sound/glitch3.mp3");
+
+
+        const images = document.querySelectorAll("img[data-clicked]");
+
+        images.forEach(function(image) {
+
+            image.addEventListener("pointerdown", function() {
+                image.src = image.dataset.clicked;
+            });
+
+            image.addEventListener("pointerup", function() {
+                image.src = image.dataset.normal;
+            });
+
+            image.addEventListener("pointerleave", function() {
+                image.src = image.dataset.normal;
+            });
+
+            image.addEventListener("pointercancel", function() {
+                image.src = image.dataset.normal;
+            });
+
+        });
+    var potionSound = new buzz.sound("sound/potion.mp3");
+    var charmSound = new buzz.sound("sound/charm.mp3");
+    var spellSound = new buzz.sound("sound/spell.mp3");
+    var hexSound = new buzz.sound("sound/hex.mp3");
+    var outfitSound = new buzz.sound("sound/outfit.mp3");
+    var duelSound = new buzz.sound("sound/duel.mp3");
+    var courtSound = new buzz.sound("sound/court.mp3");
+    var crystalSound = new buzz.sound("sound/crystal.mp3");
+    var gossipSound = new buzz.sound("sound/gossip.mp3");
+
+    document.getElementById("img1").addEventListener("click", function() {
+        potionSound.play();
+    });
+
+    document.getElementById("img2").addEventListener("click", function() {
+        charmSound.play();
+    });
+
+    document.getElementById("img3").addEventListener("click", function() {
+        spellSound.play();
+    });
+
+    document.getElementById("img4").addEventListener("click", function() {
+        hexSound.play();
+    });
+
+    document.getElementById("img5").addEventListener("click", function() {
+        outfitSound.play();
+    });
+
+    document.getElementById("img6").addEventListener("click", function() {
+        duelSound.play();
+    });
+
+    document.getElementById("img7").addEventListener("click", function() {
+        courtSound.play();
+    });
+
+    document.getElementById("img8").addEventListener("click", function() {
+        crystalSound.play();
+    });
+
+    document.getElementById("img9").addEventListener("click", function() {
+        gossipSound.play();
+    });
+    </script>
+
+</body>
+
+</html>
